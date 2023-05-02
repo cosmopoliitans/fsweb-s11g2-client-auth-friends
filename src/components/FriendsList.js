@@ -14,15 +14,13 @@ export default function FriendsList() {
   }, []);
 
   return (
-    <div>
+    <div className="friendListDiv">
       <h1>FRIENDS LIST</h1>
-      <ul>
-        {friends.map((item) => (
-          <li key={item.id}>
-            - {item.name} - {item.email}
-          </li>
-        ))}
-      </ul>
+      {friends.map((friend, key) => (
+        <div className="friendList" key={key}>
+          - {friend.name} - {friend.email}
+        </div>
+      ))}
     </div>
   );
 }

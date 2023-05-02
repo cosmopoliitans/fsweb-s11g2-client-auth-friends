@@ -9,13 +9,17 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <div>
-          <h1>FRIENDS DATABASE</h1>
-          <Link to="/login">LOGIN.</Link>
-          <Link to="/friends">FRIENDLIST.</Link>
-          <Link to="/friendsadd">ADDFRIEND.</Link>
+        <div className="header">
+          <div>
+            <h1>FRIENDS DATABASE</h1>{" "}
+          </div>
+          <div className="headerbuton">
+            <Link to="/login">LOGIN.</Link>
+            <Link to="/friends">FRIENDLIST.</Link>
+            <Link to="/friendsadd">ADDFRIEND.</Link>
+            <Link to="/login">LOGOUT</Link>
+          </div>
         </div>
-        <LogOut />
         <Switch>
           <Route path="/login">
             <Login />
@@ -23,8 +27,11 @@ function App() {
           <Route path="/friends">
             <FriendsList />
           </Route>
-          <Route path="/friends/add">
+          <Route path="/friendsadd">
             <AddFriend />
+          </Route>
+          <Route path="/login">
+            <LogOut />
           </Route>
         </Switch>
       </div>

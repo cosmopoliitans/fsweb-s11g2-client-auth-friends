@@ -30,11 +30,13 @@ export default function Login() {
   }
 
   return (
-    <div>
+    <div className="loginFormMainDiv">
       <h1>LOGIN</h1>
       <form onSubmit={handleSubmit}>
         <div>
-          <label for="username">USERNAME</label>
+          <label for="username">
+            <h2>USERNAME</h2>
+          </label>
           <br />
           <input
             onChange={handleChange}
@@ -45,7 +47,9 @@ export default function Login() {
           ></input>
           <br />
           <br />
-          <label for="pwd">PASSWORD</label>
+          <label for="pwd">
+            <h2>PASSWORD</h2>
+          </label>
           <br />
           <input
             onChange={handleChange}

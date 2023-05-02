@@ -27,17 +27,19 @@ export default function AddFriend() {
         history.push("/friendsadd");
       })
       .catch((err) => {
-        console.log(err.res.data.error);
+        console.log(err);
         setFriend({ name: "", email: "" });
       });
   }
 
   return (
-    <div>
+    <div className="loginFormMainDiv">
       <h1>ADD FRIEND</h1>
       <form onSubmit={handleSubmit}>
         <div>
-          <label>FRIEND NAME</label>
+          <label>
+            <h2>FRIEND NAME</h2>
+          </label>
           <br />
           <input
             onChange={handleChange}
@@ -47,7 +49,9 @@ export default function AddFriend() {
           ></input>
           <br />
           <br />
-          <label>FRIEND EMAIL</label>
+          <label>
+            <h2>FRIEND EMAIL</h2>
+          </label>
           <br />
           <input
             onChange={handleChange}
